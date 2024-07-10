@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Simple Timer</title>
+</head>
+<body>
+    
+    <div class="main-card mx-auto">
+        <h1 class="text-light">Timer</h1>
+        <div id="circle" class="timer-circle my-4 mx-auto">
+            <h1 id="time">01:00</h1>
+        </div>
+        <div class="icon">
+            <button class="repeat-icon btn" onclick="resettime()"><i class="bi bi-arrow-repeat"></i></button>
+            <button class="play-icon btn" onclick="play()">Start</button>
+            <button class="play-icon btn" onclick="stoptimer()">Stop</button>
+        </div>
+    </div>
+
+    <div class="bg-danger m-3" id="box" style="width: 200px; height: 200px; border: 5px solid #fff;"></div>
+
+    <script>
+        
+        let border = 0;
+        setInterval(borderAnim, 1000)
+
+        function borderAnim(){
+
+            border = border + 10
+            let Anim = document.getElementById("box")
+            Anim.style.width = border + "px"
+
+        }
+
+
+        let time = 60;
+        let timeout; 
+
+        function play() {
+            timeout = setInterval(startTime, 1000); 
+            
+        }
+
+        function startTime() {
+            time = time - 1;
+            if (time === 0) {
+                clearInterval(timeout);
+        }
+            else{
+                document.getElementById("time").innerHTML = time;
+            }
+        }
+
+        function resettime(){
+            clearInterval(timeout)
+            time = 60
+            document.getElementById("time").innerHTML = time;
+        }
+
+        function stoptimer(){
+            clearInterval(timeout)
+            time = null
+        }
+
+    </script>
+
+</body>
+</html>

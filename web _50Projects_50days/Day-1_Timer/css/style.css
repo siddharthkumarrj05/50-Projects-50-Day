@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #374151;
+  font-family: sans-serif;
+}
+.main-card {
+  background: #111827;
+  width: 350px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 70px;
+  position: absolute;
+  left: 37%;
+  top: 20%;
+}
+.timer-circle {
+  background: #1f2938;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #bfdaf6;
+  border: 3px solid #bfdaf6;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.repeat-icon {
+  width: 40px;
+  height: 40px;
+  background: #93c5fa;
+  border-radius: 50px;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+.play-icon {
+    width: 40px;
+    height: 40px;
+    background: #93c5fa;
+    color: #111827;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.repeat-icon:hover,
+.play-icon:hover {
+  background: #93c5fa;
+}
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: #5bc660 !important;
+}

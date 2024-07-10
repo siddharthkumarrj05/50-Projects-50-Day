@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../Media/bg.jpg");
+    background-size: cover;
+}
+.main-div{
+    position: absolute;
+    left: 32%;
+    text-align: center;
+    top: 33%;
+    width: 600px;
+}
+.main-div .logo{
+    width:70%;
+    margin-bottom: 25px;
+}
+.main-div input {
+    border: none;
+    font-size: 18px;
+    padding: 12px 10px;
+    width: 100%;
+}
+.main-div input:focus-visible{
+    outline: none;
+}
+.main-div input::placeholder{
+    font-weight: 300;
+}
+.mic{
+    width: 35px;
+    cursor: pointer;
+}
+.lens{
+    width: 35px;
+    cursor: pointer;
+}
+.icondiv{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+    border-radius: 50px;
+}
+.search{
+    font-size: 18px;
+    color: #9c9a9a;
+}
